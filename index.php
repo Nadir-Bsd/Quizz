@@ -9,10 +9,10 @@
 </head>
 <body>
     <!--  header -->
-    <header>
-        <a href="#" class="logo">Quizine.</a>
+    <header class="">
+        <a href="./index.php" class="logo">Quizine.</a>
         <nav class="navbar">
-            <a href="#" class="active">Home</a>
+            <a href="./index.php" class="active">Home</a>
             <a href="#">Profile</a>
         </nav>
     </header>

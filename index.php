@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="./views/styles/style.css">
     <script defer src="./views/js/handle-popup.js"></script>
 </head>
-<body class="body">
+<body>
     <!--  header -->
     <header>
         <a href="#" class="logo">Quizine.</a>

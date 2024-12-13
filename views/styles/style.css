@@ -44,6 +44,14 @@ header {
     margin-left: 35px;
 }
 
+.navbar {
+    transition: .3s ease;
+}
+
+.navbar.active {
+    display: none;
+}
+
 .navbar a:hover, .navbar a.active {
     color: #c40094;
 }

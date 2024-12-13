@@ -12,23 +12,24 @@
         <a href="../../index.php" class="logo">Quizine.</a>
         <nav class="navbar">
             <a href="../../index.php">Home</a>
-            <a href="" class="active">Category</a>
+            <a href="./category.php">Category</a>
+            <a href="" class="active">Quiz</a>
             <a href="">Profile</a>
         </nav>
     </header>
 
     <main class="container">
-        <a href="./quiz.php" class="category-and-quiz">
-            Category 1
+        <a href="./question.php" class="category-and-quiz">
+            Quiz 1
         </a>
         <a href="" class="category-and-quiz">
-            Category 2
+            Quiz 2
         </a>
         <a href="" class="category-and-quiz">
-            Category 3
+            Quiz 3
         </a>
         <a href="" class="category-and-quiz">
-            Category 4
+            Quiz 4
         </a>
     </main>
 </body>

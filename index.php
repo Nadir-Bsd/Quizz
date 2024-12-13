@@ -10,10 +10,10 @@
 <body>
     <!--  header -->
     <header>
-        <a href="#" class="logo">Quizine.</a>
+        <a href="" class="logo">Quizine.</a>
         <nav class="navbar">
-            <a href="#" class="active">Home</a>
-            <a href="#">Profile</a>
+            <a href="" class="active">Home</a>
+            <a href="">Profile</a>
         </nav>
     </header>
 

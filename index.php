@@ -13,7 +13,6 @@
         <a href="" class="logo">Quizine.</a>
         <nav class="navbar">
             <a href="" class="active">Home</a>
-            <a href="">Profile</a>
         </nav>
     </header>
 
@@ -27,6 +26,7 @@
     </main>
 
     <!-- Popup -->
+    <!-- We need to change the hint texts -->
     <div class="popup-info">
         <h2>Quiz Guid</h2>
         <span class="info">1. Lorem ipsum dolor sit amet consectetur</span>

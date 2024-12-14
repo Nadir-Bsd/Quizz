@@ -37,6 +37,9 @@
                 <span class="question-total">1 of 5 Questions</span>
                 <button class="next-btn">Next</button>
             </div>
+
+            <button class="quit">Quit</button>
+
         </div>
    </section>
 

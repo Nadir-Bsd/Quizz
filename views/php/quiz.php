@@ -19,9 +19,13 @@
     </header>
 
     <main class="container">
+
+        <!-- We need to change it to php script -->
         <a href="./question.php" class="category-and-quiz">
             Quiz 1
         </a>
+        <!-- We need to change it to php script -->
+
         <a href="" class="category-and-quiz">
             Quiz 2
         </a>

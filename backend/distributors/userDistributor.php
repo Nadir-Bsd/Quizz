@@ -2,10 +2,24 @@
 
 include_once '../factorys/UserFactory.php';
 
-$userFactory = new UserFactoy('nadir');
+session_start();
+
+if(!isset($_SESSION['user'])){
+    header("Location: ../../index.php");
+};
+
+
+$userFactory = new UserFactoy($_SESSION['user']['pseudo']);
 
 $users = $userFactory->getUser();
 
-var_dump($users[0]->getPseudo());
-var_dump($users[0]->getTotalScore());
+$_SESSION['user'] = [
+    'id' => $users[0]->getId(),
+    'pseudo' => $users[0]->getPseudo(),
+    'total_score' => $users[0]->getTotalScore()
+];
+
+header("Location: ../../views/php/profil.php");
+
+
 ?>

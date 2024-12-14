@@ -1,3 +1,13 @@
+<?php 
+
+session_start();
+
+$_SESSION['user'] = [
+    'pseudo'=>'nadir'
+];
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,7 +23,7 @@
         <a href="" class="logo">Quizine.</a>
         <nav class="navbar">
             <a href="" class="active">Home</a>
-            <a href="">Profile</a>
+            <a href="../../backend/distributors/userDistributor.php">Profile</a>
         </nav>
     </header>
 

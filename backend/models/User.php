@@ -3,9 +3,9 @@
 class user {
 
     // Propriétés
-    private int $id;
+    private string $id;
     private string $pseudo;
-    private int $total_score;
+    private string $total_score;
 
     // Méthodes magique
     public function __construct(string $pseudo)
@@ -14,6 +14,18 @@ class user {
     }
 
     // Méthodes customs
+
+    public function setId(string $id) : self
+    {
+        $this->id = $id;
+        return $this;
+    }
+
+    public function getId() : string
+    {
+        return $this->id;
+    }
+
     public function getPseudo() : string
     {
         return $this->pseudo;

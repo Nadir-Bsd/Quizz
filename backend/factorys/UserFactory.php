@@ -20,7 +20,7 @@ class UserFactoy {
     // Méthodes custom
     public function getUser() : array
     {        
-        // poli les datas
+        // revois le user fini
         $users = $this->dataPolish($this->supllier->getThatUserData($this->userName));
         return $users;
     }
@@ -38,6 +38,7 @@ class UserFactoy {
     private function hydrateUser(array $dataPolish) : User
     {
         $user = new User($dataPolish['pseudo']);
+        $user->setId($dataPolish['id']);
         $user->setTotalScore($dataPolish['total_score']);
         return $user;
     }

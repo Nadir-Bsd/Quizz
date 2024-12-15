@@ -1,3 +1,14 @@
+<?php 
+session_start();
+
+// pour voir toute les infos de la session
+// var_dump($_SESSION);
+
+
+// pour voir toutes les quizzes
+// var_dump($_SESSION['quizScore']);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>

@@ -1,3 +1,25 @@
+<?php 
+
+session_start();
+
+// pour voir toute les infos de la session
+// var_dump($_SESSION);
+
+
+// pour voir toutes les categories
+// var_dump($_SESSION['categories']);
+
+
+// pour voir toutes les infos de la premiere categorie
+// var_dump($_SESSION['categories'][0]);
+
+
+// pour voir le titre de la premiere categorie
+// var_dump($_SESSION['categories'][0]['title']);
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>

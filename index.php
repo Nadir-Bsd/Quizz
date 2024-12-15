@@ -23,7 +23,7 @@ $_SESSION['user'] = [
         <a href="" class="logo">Quizine.</a>
         <nav class="navbar">
             <a href="" class="active">Home</a>
-            <a href="../../backend/distributors/userDistributor.php">Profile</a>
+            <a href="./backend/distributors/userDistributor.php">Profile</a>
         </nav>
     </header>
 
@@ -47,7 +47,7 @@ $_SESSION['user'] = [
 
         <div class="btn-group">
             <button class="info-btn exit-btn">Exit Quiz</button>
-            <a href="./views/php/category.php" class="info-btn continue-btn">Continue</a>
+            <a href="./backend/deliverys/categoriesDelivery.php" class="info-btn continue-btn">Continue</a>
         </div>
     </div>
     

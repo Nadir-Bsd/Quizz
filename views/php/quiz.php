@@ -46,8 +46,8 @@ session_start();
             Quiz 1
         </a>
         <!-- We need to change it to php script -->
-
-        <a href="" class="category-and-quiz">
+        <!-- we have to send id_quiz dynamically in get methode -->
+        <a href="../../backend/distributors/questionDistributor.php?id=2" class="category-and-quiz">
             Quiz 2
         </a>
         <a href="" class="category-and-quiz">

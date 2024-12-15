@@ -116,6 +116,10 @@ body {
 }
 
 .quit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
     width: 100px;
     height: 45px;
     background: #6b0101;

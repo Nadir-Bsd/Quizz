@@ -34,8 +34,8 @@ session_start();
         <a href="../../index.php" class="logo">Quizine.</a>
         <nav class="navbar">
             <a href="../../index.php">Home</a>
+            <a href="./profil.php">Profile</a>
             <a href="" class="active">Category</a>
-            <a href="">Profile</a>
         </nav>
     </header>
 

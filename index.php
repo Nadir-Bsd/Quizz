@@ -23,7 +23,11 @@ $_SESSION['user'] = [
         <a href="" class="logo">Quizine.</a>
         <nav class="navbar">
             <a href="" class="active">Home</a>
-            <a href="../../backend/distributors/userDistributor.php">Profile</a>
+            <!-- <a href="backend/distributors/userDistributor.php">Profile</a> -->
+            <!-- <a href="./views/php/profil.php">Profile</a> -->
+            <?php if (isset($_SESSION['user'])) 
+            echo "<a href='./views/php/profil.php'>Profile</a>"; 
+            ?>
         </nav>
     </header>
 

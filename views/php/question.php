@@ -38,7 +38,7 @@
                 <button class="next-btn">Next</button>
             </div>
 
-            <button class="quit">Quit</button>
+            <a href="../../index.php" class="quit">Quit</a>
 
         </div>
    </section>

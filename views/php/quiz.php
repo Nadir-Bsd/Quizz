@@ -12,9 +12,9 @@
         <a href="../../index.php" class="logo">Quizine.</a>
         <nav class="navbar">
             <a href="../../index.php">Home</a>
+            <a href='./profil.php'>Profile</a>
             <a href="./category.php">Category</a>
             <a href="" class="active">Quiz</a>
-            <a href="">Profile</a>
         </nav>
     </header>
 

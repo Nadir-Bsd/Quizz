@@ -43,13 +43,13 @@ session_start();
 
         <!-- We need to change it to php script -->
          <!-- we have to send id_category dynamically in get methode -->
-        <a href="../../backend/distributors/quizzesDistributor.php?id=1" class="category-and-quiz">
-            Category 1
+        <a href="../../backend/distributors/quizzesDistributor.php?id=<?= $_SESSION['categories'][0]["id"]?>" class="category-and-quiz">
+            <?= $_SESSION['categories'][0]["title"] ?>
         </a>
         <!-- We need to change it to php script -->
 
 
-        <a href="../../backend/distributors/quizzesDistributor.php?id=2" class="category-and-quiz">
+        <a href="../../backend/distributors/quizzesDistributor.php?id=<?= $_SESSION['categories'][1]["id"]?>" class="category-and-quiz">
             Category 2
         </a>
         <a href="" class="category-and-quiz">

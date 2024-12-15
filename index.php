@@ -41,6 +41,7 @@ $_SESSION['user'] = [
     </main>
 
     <!-- Popup -->
+    <!-- We need to change the hint texts -->
     <div class="popup-info">
         <h2>Quiz Guid</h2>
         <span class="info">1. Lorem ipsum dolor sit amet consectetur</span>

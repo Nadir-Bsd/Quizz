@@ -24,7 +24,7 @@ $_SESSION['user'] = [
         <nav class="navbar">
             <a href="" class="active">Home</a>
             <?php if (isset($_SESSION['user'])) 
-            echo "<a href='../../backend/distributors/userDistributor.php'>Profile</a>"; 
+                echo "<a href='./backend/distributors/userDistributor.php'>Profile</a>"; 
             ?>
         </nav>
     </header>

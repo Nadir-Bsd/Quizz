@@ -2,9 +2,6 @@
 
 session_start();
 
-$_SESSION['user'] = [
-    'pseudo'=>'nadir'
-];
 
 ?>
 
@@ -15,7 +12,11 @@ $_SESSION['user'] = [
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quizine</title>
     <link rel="stylesheet" href="./views/styles/style.css">
-    <script defer src="./views/js/handle-popup.js"></script>
+    
+    <script src="./views/js/handle-popup.js"></script>
+    <script src="./views/js/handle-user-popup.js"></script>
+    
+    
 </head>
 <body>
     <!--  header -->
@@ -23,12 +24,10 @@ $_SESSION['user'] = [
         <a href="" class="logo">Quizine.</a>
         <nav class="navbar">
             <a href="" class="active">Home</a>
-            <?php if (isset($_SESSION['user'])) 
-            echo "<a href='../../backend/distributors/userDistributor.php'>Profile</a>"; 
-            ?>
+            <a href='./backend/distributors/userDistributor.php'>Profile</a>
         </nav>
     </header>
-
+    
     <!-- Main -->
     <main class="home">
         <section class="home-content">
@@ -38,8 +37,21 @@ $_SESSION['user'] = [
         </section>
     </main>
 
-    <!-- Popup -->
-    <!-- We need to change the hint texts -->
+    <!-- Popups -->
+   
+    <?php if(!isset($_SESSION['user'])) {  ?>
+        <div class="userPopup">
+        <h2>Connect</h2>
+        <form action="./backend/distributors/userDistributor.php" method="post">
+            <label for="pseudo">Pesudo :</label>
+            <input type="text" name="pseudo" id="pseudo" placeholder="Example: Nadir">
+            <div class="btn-group">
+                <input type="submit" class="addUserButton" value="Connect">
+            </div>
+        </form>
+    </div>
+    <?php }?>
+
     <div class="popup-info">
         <h2>Quiz Guid</h2>
         <span class="info">1. Lorem ipsum dolor sit amet consectetur</span>
@@ -53,6 +65,7 @@ $_SESSION['user'] = [
             <a href="./backend/deliverys/categoriesDelivery.php" class="info-btn continue-btn">Continue</a>
         </div>
     </div>
+    
     
 </body>
 </html>

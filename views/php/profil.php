@@ -38,7 +38,7 @@ session_start();
                 <div class="addDiv" id="addQuestionButton">Add Question</div>
             </section>
 
-            <form action="" method="post" class="addQuestionForm" id="addQuestion">
+            <form action="" method="post" class="addQuestionForm formDisplayNone" id="addQuestion">
                 <div class="form">
                     <div>
                         <label for="addQuestion">Category name :</label>
@@ -87,8 +87,10 @@ session_start();
                 </div>
                 
         
+                <div class="button">
+                    <input type="submit" value="ADD" id="submitButton">
+                </div>
                 
-                <input type="submit" value="ADD" id="submitButton">
             </form>
             
             <!-- <form action="" method="post" class="addCategoryForm formDisplayNone" id="addCategoryForm">

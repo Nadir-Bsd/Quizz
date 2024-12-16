@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 session_start();
 
@@ -11,24 +11,28 @@ session_destroy();
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quizine</title>
     <link rel="stylesheet" href="./views/styles/style.css">
-    
-    <script defer src="./views/js/handle-user-popup.js"></script>
+
+    <?php if (!isset($_SESSION['user'])) { ?>
+        <script defer src="./views/js/handle-user-popup.js"></script>
+    <?php } ?>
     <script defer src="./views/js/handle-popup.js"></script>
-    
+
 </head>
+
 <body>
     <!--  header -->
     <header>
         <a href="" class="logo">Quizine.</a>
         <nav class="navbar">
             <a href="" class="active">Home</a>
-            <?php if (isset($_SESSION['user'])) 
-                echo "<a href='./backend/distributors/userDistributor.php'>Profile</a>"; 
+            <?php if (isset($_SESSION['user']))
+                echo "<a href='./backend/distributors/userDistributor.php'>Profile</a>";
             ?>
         </nav>
     </header>
@@ -43,7 +47,7 @@ session_destroy();
     </main>
 
     <!-- Popups -->
-    <?php if(!isset($_SESSION['user'])) {  ?>
+    <?php if (!isset($_SESSION['user'])) {  ?>
         <div class="userPopup">
             <h2>Connect</h2>
             <form action="./backend/distributors/userDistributor.php" method="POST">
@@ -54,8 +58,8 @@ session_destroy();
                 </div>
             </form>
         </div>
-    <?php }?>
-   
+    <?php } ?>
+
     <div class="popup-info">
         <h2>Quiz Guid</h2>
         <span class="info">1. Lorem ipsum dolor sit amet consectetur</span>
@@ -69,6 +73,7 @@ session_destroy();
             <a href="./backend/deliverys/categoriesDelivery.php" class="info-btn continue-btn">Continue</a>
         </div>
     </div>
-    
+
 </body>
+
 </html>

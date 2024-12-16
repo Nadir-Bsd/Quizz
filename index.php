@@ -5,7 +5,6 @@ session_start();
 // $_SESSION['user'] = [
 //     'pseudo'=>'nadir'
 // ];
-
 session_destroy();
 ?>
 

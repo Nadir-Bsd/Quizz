@@ -1,5 +1,5 @@
 <?php
-include_once '../suppliers.php/AnswersSupplier.php';
+include_once '../suppliers/AnswersSupplier.php';
 include_once '../models/Answer.php';
 
 class AnswersFactory {

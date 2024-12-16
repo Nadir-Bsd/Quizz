@@ -1,11 +1,13 @@
 <?php
-include_once '../suppliers.php/QuestionSupplier.php';
+include_once '../suppliers/QuestionSupplier.php';
+include_once '../factorys/AnswersFactory.php';
 include_once '../models/Qestion.php';
 
 class QuestionFactory {
 
     // property
     private QuestionsSupplier $supplier;
+    private AnswersFactory $answerFactory;
     private string $id_quiz;
 
     // magic method
@@ -13,6 +15,8 @@ class QuestionFactory {
     {
         $this->supplier = new QuestionsSupplier();
         $this->id_quiz = $id_quiz;
+        $this->answerFactory = new AnswersFactory($id_quiz);
+
     } 
 
     // custom method
@@ -33,11 +37,20 @@ class QuestionFactory {
 
     private function hydrateQuestion(array $dataPolish) : Question
     {
+
         $question = new Question();
         $question->setId($dataPolish['id']);
         $question->setTitle($dataPolish['title']);
         $question->setId_quiz($dataPolish['id_quiz']);
-        // add answer
+        foreach ($this->answerFactory->getAnswers() as $answer) {
+            $answers[] = [
+                'id'=>$answer->getId(),
+                'response'=>$answer->getResponse(),
+                'isCorrect'=>$answer->getIsCorrect(),
+                'id_qusetion'=>$answer->getId_question()
+            ];
+        }
+        $question->setAnswers($answers);
         return $question;
     }
 

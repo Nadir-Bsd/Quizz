@@ -1,6 +1,6 @@
 <?php 
 
-include_once '../suppliers.php/QuizzesSupplier.php';
+include_once '../suppliers/QuizzesSupplier.php';
 include_once '../models/Quiz.php';
 
 class QuizzesFactory {

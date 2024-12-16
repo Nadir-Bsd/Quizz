@@ -47,7 +47,7 @@ class QuestionFactory {
                 'id'=>$answer->getId(),
                 'response'=>$answer->getResponse(),
                 'isCorrect'=>$answer->getIsCorrect(),
-                'id_qusetion'=>$answer->getId_question()
+                'id_question'=>$answer->getId_question()
             ];
         }
         $question->setAnswers($answers);

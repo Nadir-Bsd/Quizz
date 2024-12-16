@@ -9,7 +9,7 @@ if(!isset($_SESSION['user'])){
 };
 
 
-$userFactory = new UserFactoy($_SESSION['user']['pseudo']);
+$userFactory = new UserFactory($_SESSION['user']['pseudo']);
 
 $users = $userFactory->getUser();
 

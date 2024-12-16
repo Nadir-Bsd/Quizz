@@ -3,7 +3,7 @@
 include_once '../suppliers.php/UserSupplier.php';
 include_once '../models/User.php';
 
-class UserFactoy {
+class UserFactory {
 
     // Propriétés
     private UsersSupllier $supllier;

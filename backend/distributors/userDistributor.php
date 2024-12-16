@@ -4,12 +4,13 @@ include_once '../factorys/UserFactory.php';
 
 session_start();
 
-if(!isset($_SESSION['user'])){
+
+if(!isset($_POST['pseudo'])){
     header("Location: ../../index.php");
 };
 
 
-$userFactory = new UserFactory($_SESSION['user']['pseudo']);
+$userFactory = new UserFactory($_POST['pseudo']);
 
 $users = $userFactory->getUser();
 
@@ -20,6 +21,4 @@ $_SESSION['user'] = [
 ];
 
 header("Location: ../../views/php/profil.php");
-
-
 ?>

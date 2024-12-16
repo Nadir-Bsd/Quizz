@@ -16,6 +16,8 @@ session_start();
 
 // pour voir le titre du premier quiz
 // var_dump($_SESSION['quizzes'][0]['title']);
+
+$quizzes = $_SESSION['quizzes'];
 ?>
 
 
@@ -41,21 +43,12 @@ session_start();
 
     <main class="container">
 
-        <!-- We need to change it to php script -->
-        <a href="./question.php" class="category-and-quiz">
-            Quiz 1
-        </a>
-        <!-- We need to change it to php script -->
-        <!-- we have to send id_quiz dynamically in get methode -->
-        <a href="../../backend/distributors/questionDistributor.php?id=2" class="category-and-quiz">
-            Quiz 2
-        </a>
-        <a href="" class="category-and-quiz">
-            Quiz 3
-        </a>
-        <a href="" class="category-and-quiz">
-            Quiz 4
-        </a>
+         <?php foreach($quizzes as $quiz) { ?>
+            <a href="../../backend/distributors/questionsDistributor.php?id=<?= $quiz["id"] ?>" class="category-and-quiz">
+                <?= $quiz["title"] ?>
+            </a>
+        <?php } ?>
+
     </main>
 </body>
 </html>

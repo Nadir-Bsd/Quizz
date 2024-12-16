@@ -6,6 +6,7 @@ class Question {
     private string $id;
     private string $title;
     private string $id_quiz;
+    private array $answers;
 
     // magic method
 
@@ -41,6 +42,17 @@ class Question {
     public function getId_quiz() : string
     {
         return $this->id_quiz;
+    }
+
+    public function setAnswers($answers) : self
+    {
+        $this->answers = $answers;
+        return $this;
+    }
+
+    public function getAnswers() : array
+    {
+        return $this->answers;
     }
 };
 

@@ -1,5 +1,5 @@
 <?php 
-include_once '../suppliers.php/QuizScoreSupplier.php';
+include_once '../suppliers/QuizScoreSupplier.php';
 include_once '../models/QuizScore.php';
 
 class QuizScoreFactory {

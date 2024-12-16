@@ -1,6 +1,6 @@
 <?php 
 
-include_once '../suppliers.php/CategoriesSupplier.php';
+include_once '../suppliers/CategoriesSupplier.php';
 include_once '../models/Category.php';
 
 class CategoriesFactory {

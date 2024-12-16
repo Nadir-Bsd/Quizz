@@ -44,7 +44,7 @@ $quizzes = $_SESSION['quizzes'];
     <main class="container">
 
          <?php foreach($quizzes as $quiz) { ?>
-            <a href="../../backend/distributors/questionsDistributor.php?id=<?= $quiz["id"] ?>" class="category-and-quiz">
+            <a href="../../backend/distributors/gameDistributor.php?id_quiz=<?= $quiz["id"] ?>" class="category-and-quiz">
                 <?= $quiz["title"] ?>
             </a>
         <?php } ?>

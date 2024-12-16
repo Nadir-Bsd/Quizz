@@ -4,7 +4,6 @@ session_start();
 
 // var_dump($_SESSION['user']);
 
-
 ?>
 
 
@@ -24,7 +23,8 @@ session_start();
         <nav class="navbar">
             <a href="../../index.php">Home</a>
             <a href="" class="active">Profile</a>
-            <a href="./category.php">Category</a>
+            <a href="../../index.php">Logout</a>
+            <!-- <a href="./category.php">Category</a> -->
         </nav>
     </header>
 
@@ -92,26 +92,6 @@ session_start();
                 </div>
                 
             </form>
-            
-            <!-- <form action="" method="post" class="addCategoryForm formDisplayNone" id="addCategoryForm">
-                <label for="catergoryName">Category name :</label>
-                <input type="text" name="catergoryName" id="catergoryName">
-                <input type="submit" value="ADD" id="submitButton">
-            </form>
-
-            <form action="" method="post" class="quizForm formDisplayNone" id="addQuizForm">
-                <div>
-                    <label for="catergoryName">Category name :</label>
-                    <input type="text" name="catergoryName" class="name">
-                </div>
-                <div>
-                    <label for="catergoryName">Quiz :</label>
-                    <input type="text" name="catergoryName"  class="name">
-                </div>
-                <div>
-                    <input type="submit" value="ADD"  class="quizAdd">
-                </div>
-            </form> -->
 
 
         <?php } ?>

@@ -6,4 +6,3 @@ addQuestionButton.addEventListener("click", handleAddQuestion);
 function handleAddQuestion() {
     addQuestion.classList.toggle("formDisplayNone");
 }
-

@@ -17,6 +17,8 @@ session_start();
 // pour voir le titre de la premiere categorie
 // var_dump($_SESSION['categories'][0]['title']);
 
+$categories = $_SESSION['categories'];
+
 ?>
 
 
@@ -41,23 +43,12 @@ session_start();
 
     <main class="container">
 
-        <!-- We need to change it to php script -->
-         <!-- we have to send id_category dynamically in get methode -->
-        <a href="../../backend/distributors/quizzesDistributor.php?id=<?= $_SESSION['categories'][0]["id"]?>" class="category-and-quiz">
-            <?= $_SESSION['categories'][0]["title"] ?>
-        </a>
-        <!-- We need to change it to php script -->
-
-
-        <a href="../../backend/distributors/quizzesDistributor.php?id=<?= $_SESSION['categories'][1]["id"]?>" class="category-and-quiz">
-            Category 2
-        </a>
-        <a href="" class="category-and-quiz">
-            Category 3
-        </a>
-        <a href="" class="category-and-quiz">
-            Category 4
-        </a>
+        <?php foreach($categories as $category) { ?>
+            <a href="../../backend/distributors/quizzesDistributor.php?id=<?= $category["id"] ?>" class="category-and-quiz">
+                <?= $category["title"] ?>
+            </a>
+        <?php } ?>
+       
     </main>
 </body>
 </html>

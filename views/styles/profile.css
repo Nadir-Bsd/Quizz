@@ -13,6 +13,8 @@ body {
     background: url('../../assets/images/background.jpg') no-repeat;
     background-size: cover;
     background-position: center;
+    width: 100%;
+    
 }
 
 .header {
@@ -48,7 +50,7 @@ body {
 
 .container {
     width: 100%;
-    padding: 20px 10%;
+    margin: 20px 10%;
 }
 
 .addSection {
@@ -74,6 +76,68 @@ body {
     cursor: pointer;
 }
 
+.addQuestionForm {
+    margin-top: 30px;
+    /* width: 1000px; */
+    /* margin: 20px 10%; */
+    margin-right:50px;
+    /* margin-top: 4%; */
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    flex-direction: column;
+    gap: 30px;
+    transition: 1s;
+    background-color: red;
+}
+
+
+
+.addQuestionForm .form {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.addQuestionForm .form div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.addQuestionForm label {
+    font-size: 20px;
+}
+
+.addQuestionForm .addQuestion {
+    width: 400px;
+    text-decoration: none;
+    padding: 20px 10px;
+    border: 2px solid #c40094;
+    border-radius: 8px;
+    font-size: 18px;
+    color: #fff;
+    background-color: rgba(0, 0, 0, .3);
+}
+
+.addQuestionForm #submitButton {
+    width: 80px;
+    text-decoration: none;
+    padding: 20px 10px;
+    font-size: 18px;
+    background-color: rgba(5, 95, 95, 0.4);
+    color: #fff;
+    border-radius: 20px;
+    border: 2px solid rgb(5, 95, 95);
+}
+
+.addQuestionForm #submitButton:hover {
+    cursor: pointer;
+    background-color: rgb(5, 95, 95);
+}
+
 .addCategoryForm {
     height: 50vh;
     display: flex;
@@ -83,6 +147,7 @@ body {
     gap: 30px;
     transition: 1s;
 }
+
 
 .addCategoryForm label {
     font-size: 20px;

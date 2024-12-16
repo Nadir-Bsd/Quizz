@@ -31,6 +31,8 @@ class UserFactory {
         foreach ($bruteUserData as $userDataPolish) {
             $users[] = $this->hydrateUser($userDataPolish);
         }
+        var_dump($users);
+        die();
         return $users;
     }
     

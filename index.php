@@ -2,10 +2,11 @@
 
 session_start();
 
-$_SESSION['user'] = [
-    'pseudo'=>'nadir'
-];
+// $_SESSION['user'] = [
+//     'pseudo'=>'nadir'
+// ];
 
+session_destroy();
 ?>
 
 <!DOCTYPE html>
@@ -15,7 +16,10 @@ $_SESSION['user'] = [
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quizine</title>
     <link rel="stylesheet" href="./views/styles/style.css">
+    
+    <script defer src="./views/js/handle-user-popup.js"></script>
     <script defer src="./views/js/handle-popup.js"></script>
+    
 </head>
 <body>
     <!--  header -->
@@ -34,12 +38,24 @@ $_SESSION['user'] = [
         <section class="home-content">
             <h1>Quiz Website</h1>
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro eveniet consequuntur tempora explicabo, dolores nesciunt impedit repellat, consectetur ullam autem temporibus sequi. Dicta, labore voluptatem!</p>
-            <button class=start-btn>Start Quiz</button>
+            <button class="start-btn">Start Quiz</button>
         </section>
     </main>
 
-    <!-- Popup -->
-    <!-- We need to change the hint texts -->
+    <!-- Popups -->
+    <?php if(!isset($_SESSION['user'])) {  ?>
+        <div class="userPopup">
+            <h2>Connect</h2>
+            <form action="./backend/distributors/userDistributor.php" method="POST">
+                <label for="pseudo">Pesudo :</label>
+                <input type="text" name="pseudo" id="pseudo" placeholder="Example: Nadir">
+                <div class="btn-group">
+                    <input type="submit" class="addUserButton" value="Connect">
+                </div>
+            </form>
+        </div>
+    <?php }?>
+   
     <div class="popup-info">
         <h2>Quiz Guid</h2>
         <span class="info">1. Lorem ipsum dolor sit amet consectetur</span>

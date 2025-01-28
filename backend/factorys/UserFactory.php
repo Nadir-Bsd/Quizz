@@ -28,6 +28,7 @@ class UserFactory {
     // traiter les DATAS venant du supplier
     private function dataPolish(array $bruteUserData) : array
     {
+        var_dump($bruteUserData);
         foreach ($bruteUserData as $userDataPolish) {
             $users[] = $this->hydrateUser($userDataPolish);
         }

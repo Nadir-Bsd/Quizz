@@ -1,7 +1,5 @@
 <?php 
-
 include_once '../factorys/UserFactory.php';
-
 session_start();
 
 
@@ -13,6 +11,7 @@ if(!isset($_POST['pseudo'])){
 $userFactory = new UserFactory($_POST['pseudo']);
 
 $users = $userFactory->getUser();
+var_dump('test');
 
 $_SESSION['user'] = [
     'id' => $users[0]->getId(),

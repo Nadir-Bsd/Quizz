@@ -1,13 +1,3 @@
-<?php
-
-session_start();
-
-// $_SESSION['user'] = [
-//     'pseudo'=>'nadir'
-// ];
-session_destroy();
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -17,9 +7,6 @@ session_destroy();
     <title>Quizine</title>
     <link rel="stylesheet" href="./views/styles/style.css">
 
-    <?php if (!isset($_SESSION['user'])) { ?>
-        <script defer src="./views/js/handle-user-popup.js"></script>
-    <?php } ?>
     <script defer src="./views/js/handle-popup.js"></script>
 
 </head>
@@ -30,9 +17,6 @@ session_destroy();
         <a href="" class="logo">Quizine.</a>
         <nav class="navbar">
             <a href="" class="active">Home</a>
-            <?php if (isset($_SESSION['user']))
-                echo "<a href='./backend/distributors/userDistributor.php'>Profile</a>";
-            ?>
         </nav>
     </header>
 
@@ -44,20 +28,6 @@ session_destroy();
             <button class="start-btn">Start Quiz</button>
         </section>
     </main>
-
-    <!-- Popups -->
-    <?php if (!isset($_SESSION['user'])) {  ?>
-        <div class="userPopup">
-            <h2>Connect</h2>
-            <form action="./backend/distributors/userDistributor.php" method="POST">
-                <label for="pseudo">Pesudo :</label>
-                <input type="text" name="pseudo" id="pseudo" placeholder="Example: Nadir">
-                <div class="btn-group">
-                    <input type="submit" class="addUserButton" value="Connect">
-                </div>
-            </form>
-        </div>
-    <?php } ?>
 
     <div class="popup-info">
         <h2>Quiz Guid</h2>

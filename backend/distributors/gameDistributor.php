@@ -17,8 +17,7 @@ foreach ($questionsModel as $question) {
         'title'=>$question->getTitle(),
         'answers'=>$question->getAnswers(),
     ];    
-    var_dump($game['answers'][0]);
-    die();
+    var_dump($game);
 }
 
 // SCORE DU USER SUR LA QUESTION ACTIVE
